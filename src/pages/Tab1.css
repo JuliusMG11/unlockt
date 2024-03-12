@@ -1,0 +1,8 @@
+
+.first-step {
+    padding-top: 32px;
+}
+
+.showImage-step2 img {
+    filter: blur(6px);
+}

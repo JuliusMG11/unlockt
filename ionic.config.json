@@ -3,5 +3,15 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "react-vite"
+  "type": "react-vite",
+
+    "server": {
+      "localAddress": "localhost",
+      "port": 443,
+      "protocol": "https",
+      "sslKey": "./.ionic/ssl/key.pem",
+      "sslCert": "./.ionic/ssl/cert.pem"
+    }
+
+  
 }
