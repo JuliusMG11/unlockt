@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
@@ -12,12 +13,15 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import Register from './pages/Register';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import ViewEntry from './pages/ViewEntry';
+
+import { auth } from '../src/firebase.js';
+import { onAuthStateChanged } from 'firebase/auth';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,10 +41,28 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './theme/typography.css'
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App: React.FC = () => {
+
+
+  const [userValue, setUser] = useState();
+  const [showNavigation, setShowNavigation] = useState(false)
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in.
+        // console.log("User is signed in:", user);
+        setShowNavigation(true)
+    } else {
+        // No user is signed in.
+        setShowNavigation(false)
+    }
+    });
+
+return (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
@@ -48,7 +70,7 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/login"  />
           </Route>
-          <Route path="/view/:id" component={ViewEntry} />
+          <Route path="/view/:id/:postId" component={ViewEntry} />
           <Route path="/register"component={Register} />
           <Route exact path="/" component={Login} />
           <Route exact path="/tab1">
@@ -78,6 +100,7 @@ const App: React.FC = () => (
       </IonTabs>
     </IonReactRouter>
   </IonApp>
-);
+  )
+};
 
 export default App;
