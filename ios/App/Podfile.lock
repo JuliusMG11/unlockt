@@ -3,7 +3,7 @@ PODS:
     - CapacitorCordova
   - CapacitorApp (5.0.7):
     - Capacitor
-  - CapacitorCommunityMedia (5.4.0):
+  - CapacitorCommunityMedia (5.4.1):
     - Capacitor
     - SDWebImage
   - CapacitorCordova (5.7.1)
@@ -17,7 +17,7 @@ PODS:
     - Capacitor
   - CapacitorStatusBar (5.0.7):
     - Capacitor
-  - CordovaPlugins (5.7.1):
+  - CordovaPlugins (5.7.5):
     - CapacitorCordova
   - Rediska1114CapacitorSharing (0.0.2):
     - Capacitor
@@ -69,14 +69,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Capacitor: 6bd16626bc7a4a382eff16f6aed0072fe9776951
   CapacitorApp: 17fecd0e6cb23feafac7eb0939417389038b0979
-  CapacitorCommunityMedia: dd6d8dde68498d6f19d29e0f4684e5bcfd59fd51
+  CapacitorCommunityMedia: 64352c5ccc6024116c37ec7cffc1376c268a9f84
   CapacitorCordova: b49f3372270c88fd9c633a4fc8c7ef00e47dd2d6
   CapacitorFilesystem: 9f3e3c7fea2fff12f46dd5b07a2914f2103e4cfc
   CapacitorHaptics: 7c7c206f0c96a628fed073830c96d28c4b2e772e
   CapacitorKeyboard: aec619a578235c6ce279075009a2689c2cf5c42c
   CapacitorShare: c6a1ebbf0114ff9e863b966cd6052678fa25d480
   CapacitorStatusBar: f390fbb49b82ffb754ea4b3cf71dc8b048baf3e7
-  CordovaPlugins: f0e3d192a4357b614e24d18667a5bf4258094337
+  CordovaPlugins: 7e1581d0529589deaab245b1b3afb71bb98aaf32
   Rediska1114CapacitorSharing: ebcc80b3d124abf24a58df5677a8abe2913dfb8f
   SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
 

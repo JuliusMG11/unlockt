@@ -1,0 +1,14 @@
+ion-button {
+    width: 100%;
+    --background: #6A2EFD;
+    --background-hover: #3904BA;
+    --background-activated: #3904BA;
+    --background-focused: #3904BA;
+
+    --color: white;
+
+    --border-radius: 32px;
+    --border-color: #6A2EFD;
+    --border-style: solid;
+    --border-width: 1px;
+  }

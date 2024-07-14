@@ -13,7 +13,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@awesome-cordova-plugins/instagram": "^6.6.0",
+    "@awesome-cordova-plugins/instagram": "^6.7.0",
     "@capacitor-community/media": "^5.4.0",
     "@capacitor/app": "5.0.7",
     "@capacitor/core": "^5.7.1",
@@ -39,6 +39,7 @@
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
     "react-share": "^5.1.0",
+    "stackblur-canvas": "^2.7.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

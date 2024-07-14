@@ -11,10 +11,10 @@
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>InstagramAppID</key>
-	<string>1165244051309225</string>
+	<string>11165244051309225</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>instagram</string>
+		<string>instagram-stories</string>
 	</array>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>

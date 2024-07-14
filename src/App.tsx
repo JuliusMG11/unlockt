@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
@@ -15,10 +15,11 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 
 import Login from './pages/login/Login';
 import Register from './pages/Register';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import MainPage from './pages/mainPage/MainPage';
+import WalletPage from './pages/walletPage/WalletPage';
+import ProfilePage from './pages/profilePage/ProfilePage';
 import ViewEntry from './pages/ViewEntry';
+import IntroPage from './pages/introPage/IntroPage';
 
 import { auth } from '../src/firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -40,8 +41,16 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
+import './style/Global.css';
 import './theme/variables.css';
 import './theme/typography.css'
+import './style/UI/Button.css';
+
+/* NAVBAR ICONS */
+import blurIcon from './assets/icons/blur-icon.svg';
+import walletIcon from './assets/icons/wallet-icon.svg';
+import profileIcon from './assets/icons/profile-icon.svg';
+
 
 setupIonicReact();
 
@@ -51,50 +60,59 @@ const App: React.FC = () => {
   const [userValue, setUser] = useState();
   const [showNavigation, setShowNavigation] = useState(false)
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-        // User is signed in.
-        // console.log("User is signed in:", user);
-        setShowNavigation(true)
-    } else {
-        // No user is signed in.
-        setShowNavigation(false)
-    }
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setShowNavigation(true);
+      } else {
+        setShowNavigation(false);
+      }
     });
+
+    return () => unsubscribe();
+  }, []);
 
 return (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/">
+          {/* <Route exact path="/">
             <Redirect to="/login"  />
-          </Route>
+          </Route> */}
+          <Route exact path="/" component={IntroPage} />
           <Route path="/view/:id/:postId" component={ViewEntry} />
           <Route path="/register"component={Register} />
-          <Route exact path="/" component={Login} />
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route path="/login" component={Login} />
+         
+          {/* <Route exact path="/login">
+            <Login />
+          </Route> */}
+          <Route exact path="/main-page">
+            <MainPage />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/wallet-page">
+            <WalletPage />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route exact path="/profile-page">
+            <ProfilePage />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="MainPage" href="/main-page">
+            <div className="icon">
+              <img src={blurIcon} alt="" />
+            </div>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="WalletPage" href="/wallet-page">
+            <div className="icon">
+              <img src={walletIcon} alt="" />
+            </div>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="ProfilePage" href="/profile-page">
+            <div className="icon">
+              <img src={profileIcon} alt="" />
+            </div>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

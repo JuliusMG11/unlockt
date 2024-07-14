@@ -1,13 +1,13 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import ExploreContainer from '../../components/ExploreContainer';
+import './WalletPage.css';
 
-const Tab2: React.FC = () => {
+const WalletPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>WALLET PAGE</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -22,4 +22,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default WalletPage;

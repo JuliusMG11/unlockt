@@ -1,0 +1,206 @@
+
+.first-step {
+    padding-top: 32px;
+}
+
+/* .showImage-step2 img {
+    filter: blur(6px);
+} */
+
+.form-generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* PRICE INPUT */
+.price-input input {
+    position: relative;
+    width: 210px;
+    height: 60px;
+    border-radius: 32px;
+    background-color: #F4F4F4;
+    border: none;
+    color: black;
+    font-size: 42px;
+    text-align: center;
+}
+
+.price-input input::placeholder {
+    color: black;
+    font-size: 42px;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.price-input input::-webkit-outer-spin-button,
+.price-input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.price-input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* SHOW IMAGE SECTION */
+.load-content-section {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+.load-content-section .image {
+    height: 230px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.load-content-section .remove-btn {
+    position: absolute;
+    z-index: 2;
+    right: 8px;
+    top: 8px;
+    background-color: #F4F4F4;
+    font: 18px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 9px;
+    border: solid 1px #282828;
+} 
+
+.load-content-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.load-content-section .video-section {
+    position: relative;
+}
+
+.load-content-section .video {
+    position: relative;
+}
+
+
+.load-content-section .btn {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 4;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F4F4F4;
+    padding: 8px;
+} 
+
+.load-content-section .video .btn:hover {
+    cursor: pointer;
+}
+
+
+/* CUSTOM FILE INPUT */
+
+.custom-file-input {
+    position: relative;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
+}
+
+.custom-file-input .input-container {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    background-color: #F4F4F4;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.custom-file-input .input-icon {
+   text-align: center;
+}
+
+.custom-file-input input {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.custom-file-input input:hover {
+    cursor: pointer;
+}
+
+.custom-file-input .input-btn {
+    background-color: #282828;
+    color: white;
+    font-weight: 600;
+    border-radius: 32px;
+    width: 200px;
+    height: 52px;
+    font-size: 18px;
+}
+
+/* STEP 2 GENERATE IMAGE */
+
+.show-generate-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.price-label {
+    position: absolute;
+    z-index: 2;
+    font-size: 32px;
+    color: #282828;
+}
+
+.show-generate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #F4F4F4;
+    margin-bottom: 32px;
+    border-radius: 32px;
+}
+
+.link-section button {
+    padding: 8px;
+    border-radius: 32px;
+    width: max-content;
+    background: #282828;
+    color: white;
+}
