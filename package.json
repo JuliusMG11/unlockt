@@ -33,6 +33,7 @@
     "cordova-instagram-plugin": "^0.6.2",
     "firebase": "^10.8.1",
     "ionicons": "^7.0.0",
+    "notyf": "^3.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

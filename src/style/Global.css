@@ -1,5 +1,23 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ATOMS */
+@import url('./Atoms/a-global-input.css');
+
+body {
+    font-family: 'Urbanist', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Urbanist', sans-serif;
+    font-style: italic;
+}
+
 ion-tab-bar {
     --background: #282828;
     color: white;

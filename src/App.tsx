@@ -13,8 +13,10 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
+
+
 import Login from './pages/login/Login';
-import Register from './pages/Register';
+import Register from './pages/registerPage/Register';
 import MainPage from './pages/mainPage/MainPage';
 import WalletPage from './pages/walletPage/WalletPage';
 import ProfilePage from './pages/profilePage/ProfilePage';
@@ -44,7 +46,7 @@ import '@ionic/react/css/display.css';
 import './style/Global.css';
 import './theme/variables.css';
 import './theme/typography.css'
-import './style/UI/Button.css';
+import './style/Atoms/Button.css'
 
 /* NAVBAR ICONS */
 import blurIcon from './assets/icons/blur-icon.svg';
@@ -80,9 +82,9 @@ return (
           {/* <Route exact path="/">
             <Redirect to="/login"  />
           </Route> */}
+           <Route path="/register"component={Register} />
           <Route exact path="/" component={IntroPage} />
           <Route path="/view/:id/:postId" component={ViewEntry} />
-          <Route path="/register"component={Register} />
           <Route path="/login" component={Login} />
          
           {/* <Route exact path="/login">

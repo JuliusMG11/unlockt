@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: '1165244051309225',
-  appName: 'unlockt',
+  appId: 'com.blurd',
+  appName: 'blurd',
   webDir: 'dist',
   server: {
     androidScheme: 'https'

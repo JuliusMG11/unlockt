@@ -13,14 +13,3 @@
     font-size: 2rem;
     text-align: center;
 }
-
-.basic-input {
-    width: 242px;
-    height: 42px;
-    border: solid 1px white;
-    border-radius: 32px;
-    background-color: white;
-    color: #121212;
-    padding-left: 16px;
-    padding-right: 16px;
-}
