@@ -14,14 +14,19 @@ import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 
 
+/* LOGIN AND REGISTER */
+import Login from './pages/LoginPage/Login';
+import Register from './pages/RegisterPage/Register';
 
-import Login from './pages/login/Login';
-import Register from './pages/registerPage/Register';
-import MainPage from './pages/mainPage/MainPage';
-import WalletPage from './pages/walletPage/WalletPage';
-import ProfilePage from './pages/profilePage/ProfilePage';
+/* MAIN TAB NAVIGATION */
+import MainPage from './pages/MainPage/MainPage';
+import WalletPage from './pages/WalletPage/WalletPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 import ViewEntry from './pages/ViewEntry';
-import IntroPage from './pages/introPage/IntroPage';
+import IntroPage from './pages/IntroPage/IntroPage';
+
+import PostsPage from './pages/PostsPage/PostsPage'
+import PostPage from './pages/PostPage/PostPage'
 
 import { auth } from '../src/firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -52,6 +57,7 @@ import './style/Atoms/Button.css'
 import blurIcon from './assets/icons/blur-icon.svg';
 import walletIcon from './assets/icons/wallet-icon.svg';
 import profileIcon from './assets/icons/profile-icon.svg';
+import postsIcon from './assets/icons/posts-icon.svg';
 
 
 setupIonicReact();
@@ -77,48 +83,64 @@ const App: React.FC = () => {
 return (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          {/* <Route exact path="/">
-            <Redirect to="/login"  />
-          </Route> */}
-           <Route path="/register"component={Register} />
-          <Route exact path="/" component={IntroPage} />
-          <Route path="/view/:id/:postId" component={ViewEntry} />
-          <Route path="/login" component={Login} />
-         
-          {/* <Route exact path="/login">
-            <Login />
-          </Route> */}
-          <Route exact path="/main-page">
-            <MainPage />
-          </Route>
-          <Route exact path="/wallet-page">
-            <WalletPage />
-          </Route>
-          <Route exact path="/profile-page">
-            <ProfilePage />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="MainPage" href="/main-page">
-            <div className="icon">
-              <img src={blurIcon} alt="" />
-            </div>
-          </IonTabButton>
-          <IonTabButton tab="WalletPage" href="/wallet-page">
-            <div className="icon">
-              <img src={walletIcon} alt="" />
-            </div>
-          </IonTabButton>
-          <IonTabButton tab="ProfilePage" href="/profile-page">
-            <div className="icon">
-              <img src={profileIcon} alt="" />
-            </div>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
+        <Route path="/register" component={Register} />
+        <Route exact path="/" component={IntroPage} />
+        <Route path="/view/:id/:postId" component={ViewEntry} />
+        
+        {showNavigation ? (
+          <>
+            {location.pathname.startsWith('/view/') ? null : <Redirect to="/main-page" />}
+            <IonTabs>
+              <IonRouterOutlet>
+                <Route path="/post/:id" component={PostPage} />
+                <Route path="/login" component={Login} />
+                <Route exact path="/main-page">
+                  <MainPage />
+                </Route>
+                <Route exact path="/wallet-page">
+                  <WalletPage />
+                </Route>
+                <Route exact path="/profile-page">
+                  <ProfilePage />
+                </Route>
+                <Route exact path="/posts-page">
+                  <PostsPage />
+                </Route>
+              </IonRouterOutlet>
+              <IonTabBar slot="bottom">
+                <IonTabButton tab="MainPage" href="/main-page">
+                  <div className="icon">
+                    <img src={blurIcon} alt="" />
+                  </div>
+                </IonTabButton>
+                <IonTabButton tab="PostsPage" href="/posts-page">
+                  <div className="icon">
+                    <img src={postsIcon} alt="" />
+                  </div>
+                </IonTabButton>
+                <IonTabButton tab="WalletPage" href="/wallet-page">
+                  <div className="icon">
+                    <img src={walletIcon} alt="" />
+                  </div>
+                </IonTabButton>
+                <IonTabButton tab="ProfilePage" href="/profile-page">
+                  <div className="icon">
+                    <img src={profileIcon} alt="" />
+                  </div>
+                </IonTabButton>
+              </IonTabBar>
+            </IonTabs>
+          </>
+        ) : (
+          <>
+           {location.pathname.startsWith('/view/') ? (
+              <Route path="/view/:id/:postId" component={ViewEntry} />
+            ) : (
+              <Route exact path="/" component={IntroPage} />
+            )}
+          </>
+        )}
+      </IonReactRouter>
   </IonApp>
   )
 };

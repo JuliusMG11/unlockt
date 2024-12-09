@@ -35,12 +35,10 @@ const IntroPage: React.FC = () => {
 
   // LOGIN FUNCTION
   const handleLogin = async () => {
-      console.log('Login attempt with:', email, password);
       try {
           await signInWithEmailAndPassword(auth, email, password)
-          .then(() => {
-            history.push('/main-page');
-          })
+          console.log('LOGIN SUCCESS');
+          history.push('/main-page');
       } catch (error: any) {
         const errorCode = error.code;
         console.log(errorCode);

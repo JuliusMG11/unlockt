@@ -1,0 +1,36 @@
+.wallet-page-popup {
+    --background: rgba(128, 128, 128, 0.5); /* Jemne transparentný šedý obalovač */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Zabezpečí, že popup zaberá celú výšku */
+  }
+  .wallet-page-popup .ion-delegate-host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .wallet-page-popup__content {
+    background-color: white; /* Biele pozadie */
+    color: black; /* Čierny text */
+    border-radius: 10px; /* Zaoblené rohy */
+    padding: 20px; /* Vnútorné odsadenie */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Jemný tieň */
+    max-width: 400px; /* Maximálna šírka popupu */
+    width: 90%; /* Šírka popupu */
+  }
+
+  .wallet-page-popup__content input {
+    border-radius: 32px;
+    border: 2px solid #6A2EFD;
+    padding: 6px 12px;
+    background-color: white;
+    color: #121212;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .wallet-page-popup__content input:last-child {
+    margin-bottom: 0;
+  }

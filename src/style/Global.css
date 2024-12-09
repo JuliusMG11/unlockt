@@ -9,6 +9,11 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 h1 {
     font-size: 2rem;
     color: #fff;
@@ -22,6 +27,10 @@ ion-tab-bar {
     --background: #282828;
     color: white;
 }
+
+ion-content {
+    --background: #ffffff;
+  }
 
 
 /* NAVIGATION BAR */

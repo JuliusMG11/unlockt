@@ -1,6 +1,60 @@
-.avatar-image {
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.profile-page_avatar_image {
+    display: flex;
+    justify-content: center;
     width: 52px;
     height: 52px;
     overflow: hidden;
     border-radius: 50%;
+}
+
+
+.profile-page--accordion {
+    margin-top: 32px;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.logout-btn {
+   position: absolute;
+   top: 32px;
+   right: 16px;
+}
+
+.profile-page-information__bank-info,
+.profile--page__personal-info {
+    color: #121212;
+}
+
+.profile-page-information__transactions .pending-transaction-list__item {
+    display: block;
+}
+
+.profile-page-information__transactions .pending-transaction-list__item-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-page-information__transactions .pending-transaction-list__item-amount h4 {
+    font-size: 18px;
+}
+
+ion-accordion {
+    --ion-background-color: transparent;
+    --ion-text-color: #121212;
+}
+
+
+ion-item {
+    --background: transparent;
 }

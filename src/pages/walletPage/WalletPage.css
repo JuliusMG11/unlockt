@@ -1,0 +1,108 @@
+
+.wallet-page h3 {
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #121212;
+}
+
+
+.wallet-page-count {
+    margin-bottom: 32px;
+}
+
+
+.wallet-page-count__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #636E72;
+}
+
+.wallet-page-count__item span {
+    color: #636E72;
+    font-size: 20px;
+}
+
+.wallet-page-count__item h4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #121212;
+}
+
+.penging-transaction {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.penging-transaction h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.penging-transaction-list {
+   display: flex;
+   flex-direction: column;
+}
+
+.pending-transaction-list__item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #636E72;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.pending-transaction-list__item:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.pending-transaction-list__item-info__id {
+    font-size: 16px;
+    color: #121212;
+    margin-bottom: 8px;
+}
+
+.pending-transaction-list__item-info__status,
+.pending-transaction-list__item-info__date {
+    font-size: 16px;
+    color: #121212;
+}
+
+.pending-transaction-list__item-info__date {
+    margin-bottom: 8px;
+}
+
+.pending-transaction-list__item-amount h4{
+    font-size: 22px;
+    font-weight: bold;
+    color: #121212;
+    margin-bottom: 0px;
+}
+
+.pending-transaction-list__item-info__status {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pending-transaction-list__item-info__status span {
+    color: white;
+    border-radius: 32px;
+    padding: 4px 12px;
+}           
+
+.status-green {
+    background-color: #3AC430;
+}
+
+.status-orange {
+    background-color: #FF9F43;
+}

@@ -28,6 +28,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.115967563639-e1ks0mtbcks8k9dspa4vc8e1a1t4iipr</string>
@@ -35,7 +37,7 @@
 		</dict>
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
-	<false/>
+	<true/>
 	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
 	<key>CFBundleVersion</key>
@@ -52,6 +54,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The app lets you set profile picture or add your own picture when sharing your achievements with the app.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

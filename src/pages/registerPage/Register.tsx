@@ -46,8 +46,20 @@ const notyf = new Notyf({ position: { x: 'right', y: 'top' } });
 
         // Save the nickname to Firestore
       await setDoc(userRef, {
-        nick_name: nickName,
-        total_ammount: 0
+        personal_info: {
+          nick_name: nickName,
+          profile_picture: null,
+          email: email,
+        },
+        bank_info: {
+          full_name: '',
+          iban: '',
+        },
+        amount_info: {
+          total_amount: 0,
+          total_fee_amount: 0,
+          total_pending_amount: 0,
+        }
      
       }, { merge: true });
 
@@ -83,6 +95,7 @@ const notyf = new Notyf({ position: { x: 'right', y: 'top' } });
     }, { merge: true });
   } catch (error) {
     console.error("Google registration failed:", error);
+    notyf.error('Google registration failed, please try again');
   }
 };
 

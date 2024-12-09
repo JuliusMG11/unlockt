@@ -1,0 +1,16 @@
+.m-title-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 16px;
+}
+
+.m-title-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
